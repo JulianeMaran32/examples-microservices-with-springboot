@@ -1,0 +1,15 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /api
+spring:
+  application:
+    name: ms-generate-token
+  devtools:
+    add-properties: false
+logging:
+  level:
+    web: debug
+rsa:
+  private-key: classpath:certs/private.pem
+  public-key: classpath:certs/public.pem
