@@ -1,5 +1,6 @@
-package br.com.jvm.msgeneratetoken.security;
+package br.com.jvm.msgeneratetoken.framework.security;
 
+import br.com.jvm.msgeneratetoken.domain.RsaKeyProperties;
 import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;

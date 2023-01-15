@@ -1,4 +1,4 @@
-package br.com.jvm.msgeneratetoken.service;
+package br.com.jvm.msgeneratetoken.application.service;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -11,6 +11,9 @@ import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
 import org.springframework.stereotype.Service;
 
+/**
+ * Classe server para gerar o token que fará com que expire em 1 hora, podendo ser ajustado
+ */
 @Service
 @RequiredArgsConstructor
 public class TokenService {
