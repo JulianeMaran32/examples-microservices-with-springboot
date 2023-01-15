@@ -1,6 +1,8 @@
-package br.com.jvm.msreportmanagement.framework.adapter;
+package br.com.jvm.msreportmanagement.framework.adapter.in;
 
 import br.com.jvm.msreportmanagement.application.port.in.ReportService;
+import br.com.jvm.msreportmanagement.domain.Report;
+import br.com.jvm.msreportmanagement.framework.helper.PDFGenerator;
 import com.lowagie.text.DocumentException;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,8 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.util.List;
 
 @Slf4j
 @Tag(name = "Report")
@@ -27,8 +28,18 @@ public class ReportController {
 
     @GetMapping("/export-to-pdf")
     private void generatePdfFile(HttpServletResponse response) throws DocumentException, IOException {
+
         response.setContentType("application/pdf");
-        DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD:HH:MM:SS");
+
+        String headerKey = "content-Disposition";
+        String headerValue = "attachment; filename=order.pdf";
+
+        response.setHeader(headerKey, headerValue);
+
+        List<Report> reportList = service.getOrderList();
+        var generator = new PDFGenerator();
+        generator.generate(reportList, response);
+
     }
 
 }

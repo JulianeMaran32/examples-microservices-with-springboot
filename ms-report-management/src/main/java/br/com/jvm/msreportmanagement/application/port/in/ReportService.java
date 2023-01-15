@@ -1,13 +1,10 @@
 package br.com.jvm.msreportmanagement.application.port.in;
 
-import br.com.jvm.msreportmanagement.domain.Order;
-
+import br.com.jvm.msreportmanagement.domain.Report;
 import java.util.List;
 
-public interface OrderService {
+public interface ReportService {
+    void addOrder(Report order);
 
-    void addOrder(Order order);
-
-    List<Order> getOrderList();
-
+    List<Report> getOrderList();
 }

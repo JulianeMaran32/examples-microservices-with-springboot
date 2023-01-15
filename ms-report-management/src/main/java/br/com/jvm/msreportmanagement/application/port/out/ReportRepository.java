@@ -1,4 +1,4 @@
-package br.com.jvm.msreportmanagement.application.port;
+package br.com.jvm.msreportmanagement.application.port.out;
 
 import br.com.jvm.msreportmanagement.domain.Report;
 import org.springframework.data.jpa.repository.JpaRepository;
