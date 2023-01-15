@@ -16,12 +16,6 @@ springdoc:
     path: /swagger-ui.html
   default-consumes-media-type: application/json
   default-produces-media-type: application/json
-#    csrf:
-#      enabled: true
-
-#rsa:
-#  private-key: classpath:certs/private.pem
-#  public-key: classpath:certs/public.pem
 
 logging:
   level:

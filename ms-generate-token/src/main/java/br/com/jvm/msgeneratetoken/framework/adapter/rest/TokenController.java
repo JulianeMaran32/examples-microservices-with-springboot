@@ -1,7 +1,7 @@
-package br.com.jvm.msauth.controller;
+package br.com.jvm.msgeneratetoken.framework.adapter.rest;
 
-import br.com.jvm.msauth.model.Login;
-import br.com.jvm.msauth.service.TokenService;
+import br.com.jvm.msgeneratetoken.domain.Login;
+import br.com.jvm.msgeneratetoken.application.service.TokenService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
-@CrossOrigin("http://localhost:8888")
-public class AuthController {
+@CrossOrigin("http://localhost:8090")
+public class TokenController {
 
     private final TokenService tokenService;
     private final AuthenticationManager authenticationManager;
@@ -32,18 +32,32 @@ public class AuthController {
             operationId = "token"
     )
     @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "OK", content = {})
+    })
+    @PostMapping("/token")
+    public String token(Authentication authentication) {
+        log.info("Token requested for user: '{}'", authentication.getName());
+        String token = tokenService.generateToken(authentication);
+        log.info("Token granted: '{}'", token);
+        return token;
+    }
+
+    @Operation(
+            summary = "Generate Token and Login",
+            operationId = "login"
+    )
+    @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "OK", content = {
                     @Content(
                             schema = @Schema(implementation = Login.class)
                     )
             })
     })
-    @PostMapping("/token")
-    public String token(@RequestBody Login login) throws AuthenticationException {
+    @PostMapping("/login")
+    public String login(@RequestBody Login login) throws AuthenticationException {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(login.username(), login.password())
         );
         return tokenService.generateToken(authentication);
     }
-
 }
