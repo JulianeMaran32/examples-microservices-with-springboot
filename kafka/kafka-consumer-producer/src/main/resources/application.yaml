@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: kafka-consumer-producer
+  kafka:
+    consumer:
+      bootstrap-servers: 127.0.0.1:29092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: 127.0.0.1:29092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+topic:
+  name:
+    consumer: topic-test
+    producer: topic-test

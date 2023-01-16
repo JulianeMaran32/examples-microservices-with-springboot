@@ -1,14 +1,15 @@
-package br.com.jvm.kafkaproducer;
+package br.com.jvm.kafkaconsumerproducer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.kafka.annotation.EnableKafka;
 
-@EnableKafka
 @SpringBootApplication
-public class KafkaProducerApplication {
+@EnableKafka
+public class KafkaConsumerProducerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KafkaProducerApplication.class, args);
+        SpringApplication.run(KafkaConsumerProducerApplication.class, args);
     }
+
 }
