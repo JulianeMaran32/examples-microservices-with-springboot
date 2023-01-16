@@ -48,7 +48,9 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         return new InMemoryUserDetailsManager(
-                User.withUsername("username").password("{noop}password").authorities("read").build()
+                User.withUsername("${security.config.username}")
+                        .password("{noop}${security.config.password}")
+                        .authorities("read").build()
         );
     }
 
@@ -70,7 +72,7 @@ public class SecurityConfig {
     @Bean
     public JWKSource<SecurityContext> jwkSource() {
         rsaKey = Jwks.generateRsa();
-        JWKSet jwkSet = new JWKSet(rsaKey);
+        var jwkSet = new JWKSet(rsaKey);
         return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
     }
 
@@ -86,11 +88,11 @@ public class SecurityConfig {
 
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:8888"));
+        var configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(List.of("${security.config.hosts}"));
         configuration.setAllowedMethods(List.of("GET", "POST"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        var source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }

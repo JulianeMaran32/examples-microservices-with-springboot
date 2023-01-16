@@ -1,0 +1,78 @@
+openapi: 3.0.1
+info:
+  title: Auth
+  description: Microservice Auth
+  termsOfService: https://example.com/terms/
+  contact:
+    name: Juliane Maran
+    url: https://github.com/JulianeMaran32
+    email: julianemaran@gmail.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: GitHub
+  url: https://github.com/JulianeMaran32
+servers:
+  - url: http://localhost:8888/api
+paths:
+  /auth/token:
+    post:
+      tags:
+        - Auth
+      summary: Generate Token
+      operationId: token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Login'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Login'
+  /home:
+    get:
+      tags:
+        - Home
+      operationId: home
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+  /home/secure:
+    get:
+      tags:
+        - Home
+      summary: This is secured!
+      operationId: secure
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+  schemas:
+    Login:
+      type: object
+      properties:
+        username:
+          type: string
+          example: username
+        password:
+          type: string
+          example: password
+  securitySchemes:
+    Bearer:
+      type: http
+      scheme: bearer

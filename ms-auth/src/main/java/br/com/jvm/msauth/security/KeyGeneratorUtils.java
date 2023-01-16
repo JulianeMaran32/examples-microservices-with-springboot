@@ -13,7 +13,8 @@ public class KeyGeneratorUtils {
         KeyPair keyPair;
 
         try {
-            var keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+            var keyPairGenerator = KeyPairGenerator
+                    .getInstance("${key.generator.rsa}");
             keyPairGenerator.initialize(2048);
             keyPair = keyPairGenerator.generateKeyPair();
         } catch (Exception e) {
