@@ -68,4 +68,5 @@ jB9gh1boDb0RtQqBa0ndD1iHZ6ro4JiSgASXHx0LS9tcjETGMQvjWG46axRF012e2HrfDpdyXBEnoQ1p
 ## **Links**
 
 [jwt.io](https://jwt.io/)  
-[SPRING BOOT JWT](https://www.danvega.dev/blog/2022/09/06/spring-security-jwt/)
+[SPRING BOOT JWT](https://www.danvega.dev/blog/2022/09/06/spring-security-jwt/)  
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="oracle" />
+      <option name="name" value="oracle" />
+      <option name="url" value="http://10.129.178.173:8082/repository/oracle" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="http://10.129.178.173:8082/repository/maven-central" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="apache.org" />
+      <option name="name" value="apache.org" />
+      <option name="url" value="http://10.129.178.173:8082/repository/apache.org" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-central" />
+      <option name="name" value="maven-central" />
+      <option name="url" value="http://10.129.178.173:8082/repository/maven-central" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="confluent" />
+      <option name="name" value="confluent" />
+      <option name="url" value="http://packages.confluent.io/maven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ms-common-domain-mvn" />
+      <option name="name" value="ms-common-domain-mvn" />
+      <option name="url" value="http://10.129.178.173:8082/repository/ms-common-domain-mvn/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.org" />
+      <option name="name" value="jboss.org" />
+      <option name="url" value="http://10.129.178.173:8082/repository/jboss.org" />
+    </remote-repository>
+  </component>
+</project>

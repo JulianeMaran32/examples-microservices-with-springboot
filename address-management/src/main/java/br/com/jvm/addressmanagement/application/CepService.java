@@ -11,5 +11,4 @@ public interface CepService {
     @GetMapping("{cep}/json")
     Address getAddressByCep(@PathVariable(name = "cep") String cep);
 
-
 }

@@ -1,0 +1,41 @@
+
+GITHUB  
+
+-> Spring Authorization Server
+https://github.com/spring-projects/spring-authorization-server/blob/main/docs/src/docs/asciidoc/examples/src/main/java/sample/gettingStarted/SecurityConfig.java
+
+-> Angular e Spring FullStack
+https://github.com/cursodsousa/angular-e-spring-full-stack/blob/master/clientes/src/main/java/io/github/dougllasfps/clientes/config/AuthorizationServerConfig.java
+
+-> Spring Security 
+https://github.com/spring-projects/spring-security/wiki/OAuth-2.0-Migration-Guide
+
+
+SPRING 
+
+-> Spring Security 
+https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html#oauth2resourceserver-jwt-authorization
+https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html#oauth2resourceserver-authentication-bearertokenauthenticationfilter
+https://docs.spring.io/spring-security/reference/servlet/authentication/architecture.html#servlet-authentication-providermanager
+https://docs.spring.io/spring-security/reference/servlet/authentication/architecture.html#servlet-authentication-authenticationmanager
+https://docs.spring.io/spring-security/reference/features/authentication/index.html
+https://docs.spring.io/spring-security/reference/servlet/oauth2/login/core.html#oauth2login-register-clientregistrationrepository-bean
+https://docs.spring.io/spring-security/reference/features/authentication/password-storage.html#authentication-password-storage-boot-cli
+https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html
+https://docs.spring.io/spring-security/reference/reactive/oauth2/client/authorization-grants.html
+
+-> Spring Security Without the WebSecurityConfigurerAdapter
+https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter
+https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter#ldap-authentication
+
+
+https://www.danvega.dev/blog/2022/09/06/spring-security-jwt/
+
+https://github.com/cursodsousa/angular-e-spring-full-stack/blob/master/clientes/src/main/java/io/github/dougllasfps/clientes/config/AuthorizationServerConfig.java
+
+https://www.programcreek.com/java-api-examples/?api=org.springframework.security.oauth2.client.registration.ClientRegistrationRepository
+
+https://www.mballem.com/post/spring-security-6-e-spring-boot-3/
+
+
+https://mergulhospring.com.br/esr-inscricoes-amanha-jan/

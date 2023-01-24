@@ -8,19 +8,6 @@ spring:
     name: address-management
   devtools:
     add-properties: false
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/address_cep?createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: root
-    password: root
-  jpa:
-    show-sql: true
-    open-in-view: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
 
 springdoc:
   api-docs:

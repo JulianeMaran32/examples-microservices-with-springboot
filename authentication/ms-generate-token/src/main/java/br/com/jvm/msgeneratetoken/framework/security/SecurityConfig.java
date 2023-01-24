@@ -33,19 +33,19 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
-            .csrf()
-            .disable()
-            .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
-            .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .httpBasic(Customizer.withDefaults())
-            .build();
+                .csrf()
+                .disable()
+                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+                .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .httpBasic(Customizer.withDefaults())
+                .build();
     }
 
     @Bean
     public InMemoryUserDetailsManager userDetailsManager() {
         return new InMemoryUserDetailsManager(
-            User.withUsername("user").password("{noop}password").authorities("read").build()
+                User.withUsername("user").password("{noop}password").authorities("read").build()
         );
     }
 

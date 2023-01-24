@@ -1,9 +1,6 @@
 package br.com.jvm.msgeneratetoken.framework.adapter.rest;
 
-import br.com.jvm.msgeneratetoken.application.service.TokenService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import br.com.jvm.msgeneratetoken.application.service.GenerateTokenService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Auth")
 @RestController
 @RequestMapping("/auth")
-@RequiredArgsConstructor
 @CrossOrigin("http://localhost:8090")
+@RequiredArgsConstructor
 public class TokenController {
 
-    private final TokenService tokenService;
+    private final GenerateTokenService tokenService;
 
     @PostMapping("/token")
     public String token(Authentication authentication) {
@@ -30,5 +27,4 @@ public class TokenController {
         log.info("Token granted: '{}'", token);
         return token;
     }
-
 }
